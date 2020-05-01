@@ -1,5 +1,5 @@
+-- Programming Language Foundations in Agda.
 -- Exercises for chapter Naturals: Natural numbers
--- of book Programming Language Foundations in Agda.
 --
 -- See https://plfa.github.io/Naturals
 
