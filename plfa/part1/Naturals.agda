@@ -1,3 +1,8 @@
+-- Exercises for chapter Naturals: Natural numbers
+-- of book Programming Language Foundations in Agda.
+--
+-- See https://plfa.github.io/Naturals
+
 module plfa.part1.Naturals where
 
 data ℕ : Set where
@@ -14,6 +19,7 @@ open Eq.≡-Reasoning using (begin_; _≡⟨⟩_; _∎)
 seven = suc (suc (suc (suc (suc (suc (suc zero))))))
 _ : seven ≡ 7
 _ = refl
+
 
 _+_ : ℕ → ℕ → ℕ
 zero + n = n
@@ -39,6 +45,7 @@ _ =
   ≡⟨⟩
     7
   ∎
+
 
 _*_ : ℕ → ℕ → ℕ
 zero    * n = zero
@@ -130,6 +137,7 @@ _ =
     0
  ∎
 
+
 infixl 6 _+_ _∸_
 infixl 7 _*_
 
@@ -173,3 +181,4 @@ _ : from (⟨⟩ O) ≡ 0
 _ = refl
 _ : from (⟨⟩ I I O I) ≡ 13
 _ = refl
+
