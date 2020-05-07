@@ -243,7 +243,6 @@ lemma-< {suc m} {suc n} (s<s m+1<n) = s<s (lemma-< m+1<n)
 <-trans-revisited m<n n<p = lemma-< (<-if-≤ (≤-trans (s≤s (≤-if-< m<n)) (≤-if-< n<p)))
 
 
-
 data even : ℕ → Set
 data odd  : ℕ → Set
 
@@ -302,7 +301,6 @@ e+o≡o (suc em) on = suc (o+o≡e em on)
 o+o≡e (suc em) on = suc (e+o≡o em on)
 
 
-
 data Bin : Set where
   ⟨⟩ : Bin
   _O : Bin → Bin
@@ -312,15 +310,6 @@ inc : Bin → Bin
 inc ⟨⟩ = ⟨⟩ I
 inc (b O) = b I
 inc (b I) = (inc b) O
-
-_ : inc (⟨⟩ O) ≡ ⟨⟩ I
-_ = refl
-_ : inc (⟨⟩ I) ≡ ⟨⟩ I O
-_ = refl
-_ : inc (⟨⟩ I O) ≡  ⟨⟩ I I
-_ = refl
-_ : inc (⟨⟩ I I) ≡ ⟨⟩ I O O
-_ = refl
 
 to : ℕ → Bin
 to zero = ⟨⟩ O
